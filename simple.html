@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<link type ="text/css" rel="stylesheet" href="D:/best near doctor you/stylesheet.css"/>
+</head>
+<link href="C:\Users\$owmya\Downloads\bootstrap-3.3.7-dist (3)\bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+<script type="txt/css">
+function si(){
+var principal = parseInt(document.getElementById(‘principal’).value);
+var rate = parseFloat(document.getElementById(‘rate’).value);
+var months = document.getElementById(‘months’).value;
+var days = document.getElementById(‘days’).value;
+
+var totalmonths =months+(days/30);
+
+var final_si=parseFloat((principal*rate*totalmonths)/100);
+document.write("simpleinterest" + final_si);
+//document.getElementById(‘final_si’).innerHTML=”Total Simple Interest: “+final_si+”<br>Total(P+I)”+principal+”+”+final_si+”=”+(principal+final_si);
+}
+</script>
+</head>
+<body>
+<div class="row">
+<div class="col-md-2">
+Principal(P)<input type=”text” name=”principal” id=”principal” />
+</div></div>
+<div class="row">
+<div class="col-md-2">
+Rate(R) of interest</td><td>:<input type=”text” name=”rate” id=”rate” />(EX: per 100 Rupees)
+</div></div>
+<div class="row">
+<div class="col-md-2">
+
+Duration(T):Months:<input type=”text” size=”5″ name=”months” id=”months”>Days:<input type=”text” name=”days” size=”5″ id=”days”></div></div>
+<div>
+calculate
+<input type=”submit” onClick= si();/>
+<div align=”center”><span id=”final_si”></span></div>
+</div>
+</div>
+</body>
+</html>
